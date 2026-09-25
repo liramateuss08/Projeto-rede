@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Rede</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>REDE</span>
+
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#projeto">O Projeto</a>
+            <a href="pedidos.html">Necessidades</a>
+            <a href="voluntarios.html">Voluntários</a>
+            <a href="admin.html">Administrador</a>
+        </nav>
+
+        <button class="btn-header" onclick="abrirCadastro()">
+
+            Cadastrar pessoa
+
+        </button>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- INÍCIO -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <span class="tag">PROJETO A REDE</span>
+
+                <h1>
+
+                    Conectando pessoas,
+
+                    <span>criando oportunidades.</span>
+
+                </h1>
+
+                <p>
+
+                    Uma iniciativa social que busca diminuir a distância
+
+                    entre pessoas em situação de vulnerabilidade e redes
+
+                    de apoio, cidadania e oportunidades.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="btn-primary" onclick="abrirCadastro()">
+
+                        Cadastrar pessoa
+
+                    </button>
+
+                    <a href="#projeto" class="btn-secondary">
+
+                        Conheça o projeto
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-card">
+
+                <div class="card-icon">
+
+                    🤝
+
+                </div>
+
+                <h3>
+
+                    Uma rede de apoio
+
+                </h3>
+
+                <p>
+
+                    Identificamos necessidades, habilidades e oportunidades
+
+                    para aproximar pessoas e construir caminhos para a
+
+                    autonomia.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJETO -->
+
+        <section id="projeto" class="section">
+
+            <div class="section-title">
+
+                <span>O PROJETO</span>
+
+                <h2>
+
+                    Uma ponte entre quem precisa
+
+                    e quem pode ajudar.
+
+                </h2>
+
+                <p>
+
+                    O Projeto A Rede nasceu a partir da percepção de que
+
+                    problemas como falta de documentação, desemprego e
+
+                    falta de informação podem gerar isolamento e
+
+                    invisibilidade social.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="cards">
+
+                <div class="info-card">
+
+                    <div class="number">01</div>
+
+                    <h3>Cidadania</h3>
+
+                    <p>
+
+                        Apoiar o acesso a informações e serviços relacionados
+
+                        à documentação e aos direitos básicos.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <div class="number">02</div>
+
+                    <h3>Trabalho</h3>
+
+                    <p>
+
+                        Identificar profissões, habilidades e experiências
+
+                        para aproximar moradores de oportunidades de trabalho.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <div class="number">03</div>
+
+                    <h3>Comunidade</h3>
+
+                    <p>
+
+                        Fortalecer redes de apoio entre igreja, comunidade,
+
+                        voluntários e parceiros.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NECESSIDADES -->
+
+        <section id="necessidades" class="section section-gray">
+
+            <div class="section-title">
+
+                <span>MAPEAMENTO</span>
+
+                <h2>
+
+                    Quais são as necessidades?
+
+                </h2>
+
+                <p>
+
+                    O cadastro permite organizar as principais necessidades
+
+                    identificadas durante as entrevistas.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="needs-grid">
+
+                <button class="need-card" onclick="selecionarNecessidade('DOCUMENTAÇÃO')">
+
+                    <strong>📄</strong>
+
+                    <h3>Documentação</h3>
+
+                    <p>RG, CPF, CNH e outros documentos.</p>
+
+                </button>
+
+
+
+                <button class="need-card" onclick="selecionarNecessidade('EMPREGO')">
+
+                    <strong>💼</strong>
+
+                    <h3>Emprego</h3>
+
+                    <p>Busca por trabalho e renda.</p>
+
+                </button>
+
+
+
+                <button class="need-card" onclick="selecionarNecessidade('JURÍDICO')">
+
+                    <strong>⚖️</strong>
+
+                    <h3>Jurídico</h3>
+
+                    <p>Orientação e informações jurídicas.</p>
+
+                </button>
+
+
+
+                <button class="need-card" onclick="selecionarNecessidade('ASSISTÊNCIA SOCIAL')">
+
+                    <strong>🤝</strong>
+
+                    <h3>Assistência Social</h3>
+
+                    <p>Conexão com serviços e benefícios sociais.</p>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OPORTUNIDADES -->
+
+        <section id="oportunidades" class="section">
+
+            <div class="section-title">
+
+                <span>OPORTUNIDADES</span>
+
+                <h2>
+
+                    Habilidades também fazem parte da Rede.
+
+                </h2>
+
+                <p>
+
+                    O projeto busca conhecer as experiências e profissões
+
+                    dos moradores para facilitar conexões com oportunidades.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="opportunity">
+
+                <div>
+
+                    <span class="tag">
+
+                        AUTONOMIA
+
+                    </span>
+
+                    <h2>
+
+                        Cada pessoa possui
+
+                        habilidades que podem
+
+                        abrir novos caminhos.
+
+                    </h2>
+
+                    <p>
+
+                        Ao registrar experiências profissionais, habilidades
+
+                        e interesses, podemos facilitar a aproximação entre
+
+                        pessoas e oportunidades.
+
+                    </p>
+
+                </div>
+
+
+
+                <button class="btn-primary" onclick="abrirCadastro()">
+
+                    Cadastrar perfil
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FUNDAMENTAÇÃO -->
+
+        <section class="biblical">
+
+            <div>
+
+                <span>FUNDAMENTAÇÃO</span>
+
+                <h2>
+
+                    “Vai e faça o mesmo.”
+
+                </h2>
+
+                <p>
+
+                    Lucas 10:25-37 — A parábola do Bom Samaritano demonstra
+
+                    uma misericórdia prática, que não se limita ao sentimento,
+
+                    mas se transforma em cuidado e ação.
+
+                </p>
+
+            </div>
+
+            <div class="verse">
+
+                <p>
+
+                    “Então haverá igualdade.”
+
+                </p>
+
+                <small>
+
+                    2 Coríntios 8:13-14
+
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- MODAL DE CADASTRO -->
+
+    <div id="modalCadastro" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="fecharCadastro()">
+
+                ×
+
+            </button>
+
+            <span class="tag">
+
+                NOVO CADASTRO
+
+            </span>
+
+            <h2>
+
+                Cadastrar pessoa
+
+            </h2>
+
+            <p>
+
+                Registre as informações necessárias para identificar
+
+                necessidades e oportunidades.
+
+            </p>
+
+
+
+            <form id="cadastroForm">
+
+                <label>
+
+                    Nome completo
+
+                </label>
+
+                <input
+
+                    type="text"
+
+                    id="nome"
+
+                    placeholder="Digite o nome"
+
+                    maxlength="50"
+
+                    pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+"
+
+                    title="Digite apenas letras e espaços."
+
+                    required
+
+                >
+
+
+
+                <label>
+
+                    Telefone
+
+                </label>
+
+                <input
+
+                    type="tel"
+
+                    id="telefone"
+
+                    placeholder="(00) 00000-0000"
+
+                    maxlength="11"
+
+                    inputmode="numeric"
+
+                    pattern="[0-9]{10,11}"
+
+                    title="Digite apenas números. Ex.: 81999999999"
+
+                    required
+
+                >
+
+
+
+                <label>
+
+                    Necessidade principal
+
+                </label>
+
+                <select id="necessidade" required>
+
+                    <option value="">
+
+                        Selecione
+
+                    </option>
+
+                    <option value="DOCUMENTAÇÃO">
+
+                        Documentação
+
+                    </option>
+
+                    <option value="SAÚDE">
+
+                        Saúde
+
+                    </option>
+
+                    <option value="EDUCAÇÃO">
+
+                        Educação
+
+                    </option>
+
+                    <option value="EMPREGO">
+
+                        Emprego
+
+                    </option>
+
+                    <option value="MORADIA">
+
+                        Moradia
+
+                    </option>
+
+                    <option value="ALIMENTAÇÃO">
+
+                        Alimentação
+
+                    </option>
+
+                    <option value="ASSISTÊNCIA SOCIAL">
+
+                        Assistência Social
+
+                    </option>
+
+                    <option value="JURÍDICO">
+
+                        Jurídico
+
+                    </option>
+
+                    <option value="PSICOLÓGICO">
+
+                        Psicológico
+
+                    </option>
+
+                    <option value="TRANSPORTE">
+
+                        Transporte
+
+                    </option>
+
+                </select>
+
+
+
+                <label>
+
+                    Profissão / habilidade
+
+                </label>
+
+                <input
+
+                    type="text"
+
+                    id="profissao"
+
+                    placeholder="Ex.: Pedreiro, costureira..."
+
+                    maxlength="80"
+
+                    pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s/]+"
+
+                    title="Digite apenas letras, espaços ou /."
+
+                >
+
+
+
+                <label>
+
+                    Experiência profissional
+
+                </label>
+
+                <textarea
+
+                    id="experiencia"
+
+                    placeholder="Conte brevemente sobre a experiência profissional..."
+
+                    maxlength="500"
+
+                ></textarea>
+
+
+
+                <button type="submit" class="btn-primary">
+
+                    Salvar cadastro
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        <h3>PROJETO A REDE</h3>
+
+        <p>
+
+            Conectando pessoas, oportunidades e redes de apoio.
+
+        </p>
+
+        <small>
+
+            José Amaro • Heryson Rafael • Mateus Antônio
+
+        </small>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

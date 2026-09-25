@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedidos | A REDE</title>
+
+    <link rel="stylesheet" href="css/pedidos.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <nav>
+            <div class="logo">A REDE</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pedidos.html">Necessidades</a></li>
+                <li><a href="voluntarios.html">Voluntários</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <section class="pedidos">
+
+            <div class="pedidos-header">
+
+                <h1>
+                    Necessidades cadastradas
+                </h1>
+
+                <p>
+                    Aqui estão as pessoas que precisam de apoio e as
+                    necessidades que foram identificadas.
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros">
+
+                <select id="filtroCategoria">
+
+                    <option value="">
+                        Todas as necessidades
+                    </option>
+
+                    <option value="DOCUMENTAÇÃO">
+                        Documentação
+                    </option>
+
+                    <option value="SAÚDE">
+                        Saúde
+                    </option>
+
+                    <option value="EDUCAÇÃO">
+                        Educação
+                    </option>
+
+                    <option value="EMPREGO">
+                        Emprego
+                    </option>
+
+                    <option value="MORADIA">
+                        Moradia
+                    </option>
+
+                    <option value="ALIMENTAÇÃO">
+                        Alimentação
+                    </option>
+
+                    <option value="ASSISTÊNCIA SOCIAL">
+                        Assistência Social
+                    </option>
+
+                    <option value="JURÍDICO">
+                        Jurídico
+                    </option>
+
+                    <option value="PSICOLÓGICO">
+                        Psicológico
+                    </option>
+
+                    <option value="TRANSPORTE">
+                        Transporte
+                    </option>
+
+                </select>
+
+
+                <select id="filtroStatus">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="PENDENTE">
+                        Aguardando atendimento
+                    </option>
+
+                    <option value="EM_ANDAMENTO">
+                        Em andamento
+                    </option>
+
+                    <option value="CONCLUIDO">
+                        Concluído
+                    </option>
+
+                    <option value="CANCELADO">
+                        Cancelado
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LISTA DE PEDIDOS -->
+
+            <div id="listaPedidos">
+
+                <p class="carregando">
+                    Carregando necessidades...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div id="modalPedido" class="modal-pedido">
+
+        <div class="modal-conteudo">
+
+            <button
+                class="fechar-modal"
+                onclick="fecharPedido()">
+                &times;
+            </button>
+
+            <h2 id="modalTitulo">
+                Detalhes da necessidade
+            </h2>
+
+            <div id="modalInformacoes"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/pedidos.js"></script>
+
+</body>
+
+</html>

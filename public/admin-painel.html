@@ -1,0 +1,345 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | A REDE</title>
+
+    <link rel="stylesheet" href="css/admin-painel.css">
+
+</head>
+
+
+<body>
+
+    <header class="admin-header">
+
+        <div class="logo">
+            A REDE
+        </div>
+
+        <div class="admin-info">
+
+            <span>
+                Administrador
+            </span>
+
+            <button
+                type="button"
+                id="btnSair"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="painel">
+
+        <div class="painel-introducao">
+
+            <span class="subtitulo">
+                ÁREA ADMINISTRATIVA
+            </span>
+
+            <h1>
+                Painel de controle
+            </h1>
+
+            <p>
+                Acompanhe e gerencie as atividades
+                do Projeto A REDE.
+            </p>
+
+        </div>
+
+
+        <section class="resumo">
+
+            <div class="card-resumo">
+
+                <span class="icone">
+                    📋
+                </span>
+
+                <div>
+
+                    <span
+                        class="numero"
+                        id="totalPedidos"
+                    >
+                        0
+                    </span>
+
+                    <p>
+                        Necessidades
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span class="icone">
+                    👥
+                </span>
+
+                <div>
+
+                    <span
+                        class="numero"
+                        id="totalVoluntarios"
+                    >
+                        0
+                    </span>
+
+                    <p>
+                        Voluntários
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span class="icone">
+                    🧑‍💼
+                </span>
+
+                <div>
+
+                    <span
+                        class="numero"
+                        id="totalProfissionais"
+                    >
+                        0
+                    </span>
+
+                    <p>
+                        Profissionais
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span class="icone">
+                    📂
+                </span>
+
+                <div>
+
+                    <span
+                        class="numero"
+                        id="totalCasos"
+                    >
+                        0
+                    </span>
+
+                    <p>
+                        Casos
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="acoes">
+
+            <h2>
+                Gerenciamento
+            </h2>
+
+
+            <div class="acoes-grid">
+
+
+                <a
+                    href="pedidos.html"
+                    class="acao-card"
+                >
+
+                    <span class="acao-icone">
+                        📋
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Necessidades
+                        </h3>
+
+                        <p>
+                            Visualizar e acompanhar
+                            necessidades cadastradas.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="voluntarios.html"
+                    class="acao-card"
+                >
+
+                    <span class="acao-icone">
+                        👥
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Voluntários
+                        </h3>
+
+                        <p>
+                            Visualizar informações
+                            dos voluntários.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <div
+                    class="acao-card indisponivel"
+                >
+
+                    <span class="acao-icone">
+                        🧑‍💼
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Profissionais
+                        </h3>
+
+                        <p>
+                            Gerenciar profissionais
+                            cadastrados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="acao-card indisponivel"
+                >
+
+                    <span class="acao-icone">
+                        📂
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Casos
+                        </h3>
+
+                        <p>
+                            Acompanhar o andamento
+                            dos casos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            A REDE — Painel Administrativo
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        const btnSair =
+            document.getElementById("btnSair");
+
+
+        btnSair.addEventListener(
+    "click",
+    async function () {
+
+        const confirmar = confirm(
+            "Deseja realmente sair da área administrativa?"
+        );
+
+        if (!confirmar) {
+            return;
+        }
+
+        try {
+
+            const resposta = await fetch(
+                "/api/admin/logout",
+                {
+                    method: "POST"
+                }
+            );
+
+            const resultado = await resposta.json();
+
+            if (!resposta.ok || !resultado.sucesso) {
+
+                alert(
+                    resultado.mensagem ||
+                    "Não foi possível sair."
+                );
+
+                return;
+            }
+
+            window.location.href = "admin.html";
+
+        } catch (erro) {
+
+            console.error(erro);
+
+            alert(
+                "Não foi possível conectar ao servidor."
+            );
+
+        }
+
+    }
+);
+
+    </script>
+
+</body>
+
+</html>

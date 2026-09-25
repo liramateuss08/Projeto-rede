@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voluntários | A REDE</title>
+
+    <link rel="stylesheet" href="css/voluntarios.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         CABEÇALHO
+    ========================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                A REDE
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pedidos.html">
+                        Necessidades
+                    </a>
+                </li>
+
+                <li>
+                    <a href="voluntarios.html">
+                        Voluntários
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
+
+    <main>
+
+        <section class="voluntarios">
+
+            <div class="voluntarios-header">
+
+                <span class="subtitulo">
+                    FAÇA PARTE D'A REDE
+                </span>
+
+                <h1>
+                    Seja um voluntário
+                </h1>
+
+                <p>
+                    Cadastre-se para oferecer seu tempo,
+                    conhecimento e habilidades para ajudar
+                    pessoas que precisam.
+                </p>
+
+            </div>
+
+
+            <!-- ========================================
+                 FORMULÁRIO
+            ========================================= -->
+
+            <div class="formulario-container">
+
+                <div class="formulario-introducao">
+
+                    <h2>
+                        Quero ajudar
+                    </h2>
+
+                    <p>
+                        Preencha seus dados e conte como
+                        você pode contribuir.
+                    </p>
+
+                </div>
+
+
+                <form id="voluntarioForm">
+
+
+                    <!-- NOME -->
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TELEFONE -->
+
+                    <div class="campo">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="Ex.: 81999999999"
+                            maxlength="11"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ÁREA -->
+
+                    <div class="campo">
+
+                        <label for="areaAtuacao">
+                            Área em que pode ajudar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="areaAtuacao"
+                            name="areaAtuacao"
+                            placeholder="Ex.: Educação, saúde, tecnologia..."
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DISPONIBILIDADE -->
+
+                    <div class="campo">
+
+                        <label for="disponibilidade">
+                            Disponibilidade
+                        </label>
+
+                        <select
+                            id="disponibilidade"
+                            name="disponibilidade"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione sua disponibilidade
+                            </option>
+
+                            <option value="MANHÃ">
+                                Manhã
+                            </option>
+
+                            <option value="TARDE">
+                                Tarde
+                            </option>
+
+                            <option value="NOITE">
+                                Noite
+                            </option>
+
+                            <option value="FINS DE SEMANA">
+                                Fins de semana
+                            </option>
+
+                            <option value="FLEXÍVEL">
+                                Flexível
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DESCRIÇÃO -->
+
+                    <div class="campo">
+
+                        <label for="descricao">
+                            Como você pode ajudar?
+                        </label>
+
+                        <textarea
+                            id="descricao"
+                            name="descricao"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Conte um pouco sobre como você pode contribuir..."
+                        ></textarea>
+
+                        <small id="contadorDescricao">
+                            0 / 500 caracteres
+                        </small>
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="btn-cadastrar"
+                    >
+                        Quero ser voluntário
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         RODAPÉ
+    ========================================= -->
+
+    <footer>
+
+        <p>
+            A REDE — Conectando quem precisa
+            com quem pode ajudar.
+        </p>
+
+    </footer>
+
+
+    <script src="js/voluntarios.js"></script>
+
+</body>
+
+</html>

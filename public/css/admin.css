@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f5;
+    min-height: 100vh;
+}
+
+.admin-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.admin-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: #ffffff;
+
+    padding: 45px 40px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.admin-logo {
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #176b45;
+
+    margin-bottom: 20px;
+}
+
+.admin-subtitulo {
+    display: block;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #6b7280;
+
+    margin-bottom: 10px;
+}
+
+.admin-card h1 {
+    font-size: 28px;
+
+    color: #1f2937;
+
+    margin-bottom: 12px;
+}
+
+.admin-descricao {
+    color: #6b7280;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.campo {
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #374151;
+
+    margin-bottom: 7px;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: #176b45;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 107, 69, 0.10);
+}
+
+.btn-entrar {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    background: #176b45;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-entrar:hover {
+    background: #125638;
+}
+
+.mensagem-login {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+.voltar {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #176b45;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+
+    .admin-card {
+        padding: 35px 25px;
+    }
+
+    .admin-card h1 {
+        font-size: 24px;
+    }
+
+}

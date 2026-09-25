@@ -1,0 +1,332 @@
+/* ========================================
+   PÁGINA DE VOLUNTÁRIOS — A REDE
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332e;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e4e8e6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 28px;
+}
+
+header a {
+    text-decoration: none;
+    color: #35423c;
+    font-weight: 600;
+}
+
+header a:hover {
+    color: #2d6a4f;
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.voluntarios {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 65px 25px 80px;
+}
+
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+======================================== */
+
+.voluntarios-header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    display: inline-block;
+
+    color: #2d6a4f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+.voluntarios-header h1 {
+    margin: 0 0 15px;
+
+    font-size: 40px;
+
+    color: #244b3b;
+}
+
+.voluntarios-header p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #66736d;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.formulario-container {
+    background: #ffffff;
+
+    border: 1px solid #e2e7e4;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-introducao {
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+.formulario-introducao h2 {
+    margin: 0 0 8px;
+
+    color: #2d6a4f;
+
+    font-size: 25px;
+}
+
+.formulario-introducao p {
+    margin: 0;
+
+    color: #66736d;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #34433c;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d4ddd8;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #26332e;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+
+    border-color: #2d6a4f;
+
+    box-shadow:
+        0 0 0 3px rgba(45, 106, 79, 0.10);
+}
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 130px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTADOR
+======================================== */
+
+#contadorDescricao {
+    display: block;
+
+    margin-top: 6px;
+
+    text-align: right;
+
+    color: #7a8580;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.btn-cadastrar {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    background: #2d6a4f;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-cadastrar:hover {
+    background: #24563f;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    background: #244b3b;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 650px) {
+
+    header nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    header ul {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .voluntarios {
+        padding: 45px 15px 60px;
+    }
+
+    .voluntarios-header h1 {
+        font-size: 31px;
+    }
+
+    .formulario-container {
+        padding: 25px 20px;
+    }
+
+}
