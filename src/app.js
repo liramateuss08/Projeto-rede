@@ -8,7 +8,7 @@ const session = require("express-session");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // ========================================
 // CONFIGURAÇÕES
@@ -602,10 +602,6 @@ app.post("/api/admin/logout", (req, res) => {
 // INICIAR SERVIDOR
 // ========================================
 
-app.listen(PORT, () => {
-
-    console.log(
-        `Projeto Rede rodando em http://localhost:${PORT}`
-    );
-
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Projeto Rede rodando na porta ${PORT}`);
 });
